@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FF TOURNAMENT BY RANGA</title>
+	<link rel="stylesheet" type="text/css" href="google f.css">
+</head>
+<body>
+	<form  action="https://script.google.com/macros/s/AKfycbxuAe_63nvTKvSLJLPhge8xkHrYDvJVwN_YKSO9k5E6XvDv2nO84QnbrLuUOturczI/exec"method="post" id="sheetdb-form">
+	<div class="form">
+		<div class="title-div">
+			<h1>FREE FIRE TOURNAMENT</h1>
+			<p>This is a google form. This form is to register the tournament.</p>
+			<p class="required">*Required</p>
+		</div>
+
+		<div class="name-div">
+			<div class="name">FF Squad Name <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="team name" placeholder="TEAM NAME"></div>
+		</div>
+
+		<div class="college-div">
+			<div class="name">Enter player Uid 1 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="uid 1" placeholder="UID"></div>
+			<div class="name">Enter player Uid 2 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="uid 2" placeholder="UID"></div>
+			<div class="name">Enter player Uid 3 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="uid 3" placeholder="UID"></div>
+			<div class="name">Enter player Uid 4 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="uid 4" placeholder="UID"></div>
+		</div>
+		<div class="ingamename-div">
+			<div class="name">Enter player Name 1 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="name 1" placeholder="NAME"></div>
+			<div class="name">Enter player Name 2<span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="name 2" placeholder="NAME"></div>
+			<div class="name">Enter player Name 3 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="name 3" placeholder="NAME"></div>
+			<div class="name">Enter player Name 4 <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="name 4" placeholder="NAME"></div>
+		</div>
+
+		<div class="mobile-div">
+			<div class="name">Enter  Your Contect no. <span class="required">*</span></div>
+			<div class="input-div"><input type="input" name="number" placeholder="MOBILE NUMBER"></div>
+		</div>
+
+		<div>
+			<input class="btn" type="submit" name="Submit">
+		</div>
+
+		<div class="last-div">
+			<p class="never">Never submit passwords through Google Forms.</p>
+			<p class="term">This content is orgnized by Ranganthan. Report Abuse - Term of Service - Private Policy</p>
+			<h2>Google Forms</h2>
+		</div>
+		
+	</div>
+</form>
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbxuAe_63nvTKvSLJLPhge8xkHrYDvJVwN_YKSO9k5E6XvDv2nO84QnbrLuUOturczI/exec'
+	const form = document.forms['submit-to-google-sheet']
+  
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => console.log('Success!', response))
+		.catch(error => console.error('Error!', error.message))
+	})
+  </script>
+	
+</body>
+</html>
